@@ -1,0 +1,17 @@
+programa
+{
+    funcao inicio()
+    {
+        real L1, L2
+
+        escreva("b) Digite o comprimento do lado 1 (em metros): ")
+        leia(L1)
+
+        escreva("Digite o comprimento do lado 2 (em metros): ")
+        leia(L2)
+
+        real diagonal = raiz_quadrada(L1*L1 + L2*L2)
+
+        escreva("Quantidade mínima de fio necessária (m): ", diagonal, "\n")
+    }
+}
