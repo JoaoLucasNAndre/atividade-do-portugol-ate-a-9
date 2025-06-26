@@ -1,0 +1,18 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro tempo_total_minutos = 60 + 40 // 100 minutos no total
+        inteiro num_disciplinas = 6
+
+        // Calcula o tempo dedicado a cada disciplina (divisão inteira)
+        inteiro tempo_por_disciplina = tempo_total_minutos 
+
+        // Calcula o tempo livre restante (resto da divisão)
+        inteiro tempo_livre = tempo_total_minutos 
+
+        escreva("Tempo total disponível (minutos): ", tempo_total_minutos, "\n")
+        escreva("Tempo por disciplina (minutos): ", tempo_por_disciplina, "\n")
+        escreva("Tempo livre restante (minutos): ", tempo_livre, "\n")
+    }
+}
