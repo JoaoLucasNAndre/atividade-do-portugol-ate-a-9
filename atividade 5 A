@@ -1,0 +1,13 @@
+programa
+{
+    funcao inicio()
+    {
+        real lado1 = 11.5
+        real lado2 = 6.3
+
+        // Calcula a diagonal pelo Teorema de Pitágoras
+        real diagonal = (lado1*lado1 + lado2*lado2)
+
+        escreva("a) Quantidade mínima de fio necessária (m): ", diagonal , "\n")
+    }
+}
