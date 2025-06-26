@@ -1,0 +1,15 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro idade
+        inteiro soma_idades
+
+        escreva("Digite a idade: ")
+        leia(idade)
+
+        soma_idades = idade * (idade + 1) / 2
+
+        escreva("A soma de todas as idades até ", idade, " é: ", soma_idades, "\n")
+    }
+}
