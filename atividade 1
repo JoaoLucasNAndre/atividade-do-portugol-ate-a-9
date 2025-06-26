@@ -1,0 +1,46 @@
+programa
+{
+    // Declaração de variáveis
+    inteiro horas_por_dia = 24
+    inteiro dias_por_ano = 365
+    inteiro minutos_por_hora = 60
+    inteiro segundos_por_minuto = 60
+
+    inteiro anos_por_decada = 10
+
+    inteiro minha_idade_anos
+    inteiro chocolates_por_dia
+    inteiro anos_idade_segundos
+
+    inteiro idade_em_segundos
+
+    funcao inicio()
+    {
+        // a. Quantas horas há em um ano?
+        inteiro horas_por_ano = horas_por_dia * dias_por_ano
+        escreva("a) Horas em um ano: ", horas_por_ano, "\n")
+
+        // b. Quantos minutos há em uma década?
+        inteiro minutos_por_ano = minutos_por_hora * horas_por_dia * dias_por_ano
+        inteiro minutos_por_decada = minutos_por_ano * anos_por_decada
+        escreva("b) Minutos em uma década: ", minutos_por_decada, "\n")
+
+        // c. Qual é a sua idade em segundos?
+        escreva("c) Qual a sua idade (em anos)? ")
+        leia(minha_idade_anos)
+        idade_em_segundos = minha_idade_anos * dias_por_ano * horas_por_dia * minutos_por_hora * segundos_por_minuto
+        escreva("Sua idade em segundos é: ", idade_em_segundos, "\n")
+
+        // d. Quantos chocolates você pretende comer na vida?
+        escreva("d) Quantos chocolates você pretende comer por dia? ")
+        leia(chocolates_por_dia)
+        inteiro anos_de_vida = 80 // supondo 80 anos de expectativa de vida
+        inteiro total_chocolates = chocolates_por_dia * anos_de_vida * dias_por_ano
+        escreva("Você pretende comer ", total_chocolates, " chocolates na vida.\n")
+
+        // e. Se minha idade é de 977 milhões de segundos, qual é minha idade em anos?
+        inteiro idade_segundos = 977000000
+        anos_idade_segundos = idade_segundos / (segundos_por_minuto * minutos_por_hora * horas_por_dia * dias_por_ano)
+        escreva("e) Idade em anos para 977 milhões de segundos: ", anos_idade_segundos, "\n")
+    }
+}
