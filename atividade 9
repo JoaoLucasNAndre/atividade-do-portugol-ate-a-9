@@ -1,0 +1,24 @@
+programa
+{
+    funcao inicio()
+    {
+        real area
+        real litros_necessarios
+        inteiro latas
+        real preco_lata = 480.0
+        real litros_por_lata = 18.0
+
+        escreva("Digite o tamanho da área a ser pintada (m²): ")
+        leia(area)
+
+        litros_necessarios = area / 3.0
+
+        // Calcular latas necessárias (arredondar para cima)
+        latas = inteiro(ceil(litros_necessarios / litros_por_lata))
+
+        real preco_total = latas * preco_lata
+
+        escreva("Quantidade de latas necessárias: ", latas, "\n")
+        escreva("Preço total: R$ ", preco_total, "\n")
+    }
+}
