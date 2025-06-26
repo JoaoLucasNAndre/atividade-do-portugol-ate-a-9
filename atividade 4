@@ -1,0 +1,34 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro comprimento_pedaco = 45      // em cm
+        inteiro comprimento_tabua_3m = 300   // 3 metros em cm
+        inteiro comprimento_tabua_4m = 400   // 4 metros em cm
+        inteiro comprimento_tabua_5m = 500   // 5 metros em cm
+
+        // Para tábua de 3 metros
+        inteiro pecas_3m = comprimento_tabua_3m 
+        inteiro sobra_3m = comprimento_tabua_3m 
+
+        // Para tábua de 4 metros
+        inteiro pecas_4m = comprimento_tabua_4m 
+        inteiro sobra_4m = comprimento_tabua_4m 
+
+        // Para tábua de 5 metros
+        inteiro pecas_5m = comprimento_tabua_5m 
+        inteiro sobra_5m = comprimento_tabua_5m 
+
+        escreva("Para tábua de 3 metros:\n")
+        escreva("Pedaços: ", pecas_3m, "\n")
+        escreva("Sobra (cm): ", sobra_3m, "\n\n")
+
+        escreva("Para tábua de 4 metros:\n")
+        escreva("Pedaços: ", pecas_4m, "\n")
+        escreva("Sobra (cm): ", sobra_4m, "\n\n")
+
+        escreva("Para tábua de 5 metros:\n")
+        escreva("Pedaços: ", pecas_5m, "\n")
+        escreva("Sobra (cm): ", sobra_5m, "\n\n")
+    }
+}
