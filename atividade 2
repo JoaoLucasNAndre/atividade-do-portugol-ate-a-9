@@ -1,0 +1,91 @@
+programa
+{
+    // Constantes
+    real dias_por_ano = 365.25
+    real segundos_por_ano = 31557600
+
+    // Períodos orbitais em anos terrestres
+    real periodo_terra = 1.0
+    real periodo_mercurio = 0.2408467
+    real periodo_venus = 0.61519726
+    real periodo_marte = 1.8808158
+    real periodo_jupiter = 11.862615
+    real periodo_urano = 84.016846
+    real periodo_netuno = 164.79132
+
+    funcao inicio()
+    {
+        // a. Quantos dias terrestres cada planeta leva para dar uma volta completa no Sol?
+        escreva("a) Dias orbitais dos planetas:\n")
+        escreva("Terra: ", periodo_terra * dias_por_ano, " dias\n")
+        escreva("Mercúrio: ", periodo_mercurio * dias_por_ano, " dias\n")
+        escreva("Vênus: ", periodo_venus * dias_por_ano, " dias\n")
+        escreva("Marte: ", periodo_marte * dias_por_ano, " dias\n")
+        escreva("Júpiter: ", periodo_jupiter * dias_por_ano, " dias\n")
+        escreva("Urano: ", periodo_urano * dias_por_ano, " dias\n")
+        escreva("Netuno: ", periodo_netuno * dias_por_ano, " dias\n\n")
+
+        // b. Se minha idade é de 977 milhões de segundos terrestres, qual é minha idade em Mercúrio?
+        real idade_segundos = 977000000
+        real idade_anos_terra = idade_segundos / segundos_por_ano
+        real idade_mercurio = idade_anos_terra / periodo_mercurio
+        escreva("b) Idade em Mercúrio para 977 milhões de segundos: ", idade_mercurio, " anos mercurianos\n\n")
+
+        // c. Leia a idade de uma pessoa e um planeta. Calcule e mostre a idade da pessoa nesse planeta.
+        escreva("c) Digite sua idade em anos terrestres: ")
+        real idade_terra_usuario
+        leia(idade_terra_usuario)
+
+        escreva("Digite o nome do planeta (mercurio, venus, marte, jupiter, urano, netuno): ")
+        cadeia planeta
+        leia(planeta)
+
+        real periodo_planeta = 0
+        se (planeta == "mercurio") {
+            periodo_planeta = periodo_mercurio
+        } senao se (planeta == "venus") {
+            periodo_planeta = periodo_venus
+        } senao se (planeta == "marte") {
+            periodo_planeta = periodo_marte
+        } senao se (planeta == "jupiter") {
+            periodo_planeta = periodo_jupiter
+        } senao se (planeta == "urano") {
+            periodo_planeta = periodo_urano
+        } senao se (planeta == "netuno") {
+            periodo_planeta = periodo_netuno
+        } senao {
+            escreva("Planeta inválido!\n")
+            
+        }
+
+        real idade_no_planeta = idade_terra_usuario / periodo_planeta
+        escreva("Sua idade em ", planeta, " é: ", idade_no_planeta, " anos ", planeta, "\n\n")
+
+        // d. Leia a idade de uma pessoa e informe em qual planeta ela seria mais jovem.
+        escreva("d) Digite sua idade em anos terrestres para saber onde você é mais jovem: ")
+        real idade_terra_d
+        leia(idade_terra_d)
+
+        real idades_planetas[6]
+        idades_planetas[0] = idade_terra_d / periodo_mercurio
+        idades_planetas[1] = idade_terra_d / periodo_venus
+        idades_planetas[2] = idade_terra_d / periodo_marte
+        idades_planetas[3] = idade_terra_d / periodo_jupiter
+        idades_planetas[4] = idade_terra_d / periodo_urano
+        idades_planetas[5] = idade_terra_d / periodo_netuno
+
+        cadeia nomes_planetas[6] = {"Mercúrio", "Vênus", "Marte", "Júpiter", "Urano", "Netuno"}
+
+        real idade_minima = idades_planetas[0]
+        cadeia planeta_mais_jovem = nomes_planetas[0]
+
+        para (inteiro i = 1; i < 6; i++) {
+            se (idades_planetas[i] < idade_minima) {
+                idade_minima = idades_planetas[i]
+                planeta_mais_jovem = nomes_planetas[i]
+            }
+        }
+
+        escreva("Você é mais jovem no planeta: ", planeta_mais_jovem, " com ", idade_minima, " anos.\n")
+    }
+}
