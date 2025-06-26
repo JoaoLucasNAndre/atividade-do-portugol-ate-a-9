@@ -1,0 +1,25 @@
+programa
+{
+    funcao inicio()
+    {
+        real tamanho_arquivo_MB
+        real velocidade_Mbps
+
+        escreva("Digite o tamanho do arquivo para download (em MB): ")
+        leia(tamanho_arquivo_MB)
+
+        escreva("Digite a velocidade do link de Internet (em Mbps): ")
+        leia(velocidade_Mbps)
+
+        // Converte tamanho do arquivo para Megabits
+        real tamanho_arquivo_Mb = tamanho_arquivo_MB * 8
+
+        // Calcula o tempo em segundos
+        real tempo_segundos = tamanho_arquivo_Mb / velocidade_Mbps
+
+        // Converte para minutos
+        real tempo_minutos = tempo_segundos / 60
+
+        escreva("Tempo aproximado de download (minutos): ", tempo_minutos, "\n")
+    }
+}
