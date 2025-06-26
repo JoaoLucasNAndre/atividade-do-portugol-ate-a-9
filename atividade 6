@@ -1,0 +1,16 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro minutos_por_dia = 5
+        inteiro dias_por_semana = 6
+        inteiro semanas_por_ano = 52
+
+        inteiro minutos_por_semana = minutos_por_dia * dias_por_semana
+        inteiro minutos_por_ano = minutos_por_semana * semanas_por_ano
+
+        real horas_por_ano = minutos_por_ano / 60.0
+
+        escreva("Tempo dedicado à leitura em um ano (horas): ", horas_por_ano, "\n")
+    }
+}
